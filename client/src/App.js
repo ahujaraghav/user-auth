@@ -49,7 +49,6 @@ class App extends React.Component {
 
         {this.state.isAuthenticated !== undefined &&
           <React.Fragment>
-
             <nav class="navbar navbar-dark bg-dark mb-3">
               <div className="d-flex w-100 li-parent justify-content-end" style={{ listStyleType: 'none' }}>
                 <li className="mr-auto"><Link to="/">Home</Link></li>
@@ -67,6 +66,7 @@ class App extends React.Component {
               </div>
             </nav>
 
+          <div className="mt-5">
             {this.state.isAuthenticated ?
               <React.Fragment>
                 <Route path="/users" component={(props) => {
@@ -99,7 +99,7 @@ class App extends React.Component {
 
             <Route path="/" exact={true} render={() => {
               return (
-                <div className="border p-2 mt-5 mx-auto rounded shadow text-center" style={{ 'max-width': '480px' }}>
+                <div className="border p-2 mt-5 mx-auto rounded shadow text-center my-auto" style={{ 'max-width': '480px' }}>
                   <h3 className="">About this Application</h3>
                   <ol>
                     <li>This app demonstrates Multi-Factor User Authentication.</li>
@@ -110,8 +110,9 @@ class App extends React.Component {
                 </div>
               )
             }} />
+            </div>
           </React.Fragment>
-        }
+        }    
       </BrowserRouter>
     )
   }
