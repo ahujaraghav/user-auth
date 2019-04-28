@@ -100,7 +100,7 @@ class App extends React.Component {
             <Route path="/" exact={true} render={() => {
               return (
                 <div className="border p-2 mt-5 mx-auto rounded shadow text-center" style={{ 'max-width': '480px' }}>
-                  <h3 className="">About this App</h3>
+                  <h3 className="">About this Application</h3>
                   <ol>
                     <li>This app demonstrates Multi-Factor User Authentication.</li>
                     <li>You will need Google Authenticator App to test this.</li>
